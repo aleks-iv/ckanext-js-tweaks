@@ -7,6 +7,8 @@ js_tweaks-js:
 
     - js/base/OverlayScrollbars.min.js
     - js/tweaks-scrollbars.js
+    - js/tweaks-toogle-tooltip.js
+    - js/tweaks-search-facet.js
   extra:
     preload:
       - base/main
@@ -15,4 +17,5 @@ js_tweaks-css:
   filter: cssrewrite
   output: ckanext-js_tweaks/%(version)s-js_tweaks.css
   contents:
+    - css/js-tweaks.css
     - css/base/OverlayScrollbars.min.css
