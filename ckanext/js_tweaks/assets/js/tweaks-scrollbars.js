@@ -5,7 +5,9 @@ ckan.module("tweaks-scrollbar", function ($, _) {
             className: "os-theme-dark",
             normalizeRTL: true,
             autoHide: "never",
-            autoHideDelay: 800
+            autoHideDelay: 800,
+            visibility: "auto",
+
         },
         initialize: function () {
             OverlayScrollbars($(this.el), {
@@ -13,7 +15,8 @@ ckan.module("tweaks-scrollbar", function ($, _) {
                 normalizeRTL: this.options.normalizeRTL,
                 scrollbars: {
                     autoHide: this.options.autoHide,
-                    autoHideDelay: this.options.autoHideDelay
+                    autoHideDelay: this.options.autoHideDelay,
+                    visibility: this.options.visibility,
                 }
             })
         },

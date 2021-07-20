@@ -1,4 +1,6 @@
 from typing import List
+from datetime import datetime as dt
+
 import ckan.plugins.toolkit as tk
 
 
@@ -20,3 +22,8 @@ def is_searchable_facet(name: str) -> bool:
     return name in {
         field.strip() for field in fields.split(",")
     }
+
+
+@helper
+def get_current_year() -> int:
+    return dt.today().year
