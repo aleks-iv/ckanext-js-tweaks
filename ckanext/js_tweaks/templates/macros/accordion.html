@@ -13,7 +13,7 @@
                 {% endif %}
             </div>
 
-            <div id="card-body-{{ id }}" class="collapse {% if is_expanded %}in{% endif %}" aria-labelledby="heading-{{ id }}"
+            <div id="card-body-{{ id }}" class="card-body collapse {% if is_expanded %}in{% endif %}" aria-labelledby="heading-{{ id }}"
                 data-parent="#card-body-{{ id }}">
                 {{ caller(False) }}
             </div>
