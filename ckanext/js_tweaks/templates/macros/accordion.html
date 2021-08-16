@@ -15,7 +15,9 @@
 
             <div id="card-body-{{ id }}" class="card-body collapse {% if is_expanded %}in{% endif %}" aria-labelledby="heading-{{ id }}"
                 data-parent="#card-body-{{ id }}">
-                {{ caller(False) }}
+                <div class="body-wrapper">
+                    {{ caller(False) }}
+                </div>
             </div>
         </div>
     </div>
