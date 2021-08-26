@@ -1,5 +1,5 @@
 {% macro accordion(id, is_expanded=false, title="Accordion title", custom_header=false) %}
-    <div class="accordion" id="related-packages">
+    <div class="accordion" id="accordion-{{ id }}">
         <div class="card">
             <div class="card-header">
                 {% if custom_header %}
