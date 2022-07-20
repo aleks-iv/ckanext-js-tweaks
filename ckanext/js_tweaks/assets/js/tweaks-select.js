@@ -17,6 +17,8 @@ ckan.module("tweaks-select", function ($, _) {
                     $("<li>", {
                         text: el.textContent,
                         "data-index": idx,
+                        "data-value": el.value,
+                        "class": select[0].selectedIndex === idx ? "active" : "",
                         on: {
                             click: function () {
                                 select[0].selectedIndex = idx;
