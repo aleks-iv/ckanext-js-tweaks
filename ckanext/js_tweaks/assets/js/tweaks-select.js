@@ -14,7 +14,7 @@ ckan.module("tweaks-select", function ($, _) {
 
             select.find("option").each(function (idx, el) {
                 options.append(
-                    $("<li>", {
+                    $("<div>", {
                         text: el.textContent,
                         "data-index": idx,
                         "data-value": el.value,

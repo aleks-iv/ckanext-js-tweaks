@@ -48,7 +48,7 @@ Examples:
       </span>
     </button>
 
-    <ul class="select-options select-options-{{id}}" {% if with_scrollbar %} data-module="tweaks-scrollbar" {% endif %}></ul>
+    <div class="select-options select-options-{{id}}" {% if with_scrollbar %} data-module="tweaks-scrollbar" {% endif %}></div>
 
     {% call form.input_block(id or name, label or name, error, classes, is_required=is_required) %}
 
