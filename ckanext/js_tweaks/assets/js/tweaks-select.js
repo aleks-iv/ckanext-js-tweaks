@@ -18,6 +18,8 @@ ckan.module("tweaks-select", function ($, _) {
                         text: el.textContent,
                         "data-index": idx,
                         "data-value": el.value,
+                        "tabindex": '-1',
+                        "role": "button",
                         "class": select[0].selectedIndex === idx ? "active" : "",
                         on: {
                             click: function () {
@@ -27,6 +29,12 @@ ckan.module("tweaks-select", function ($, _) {
                                     select[0].form.submit();
                                 }
                             },
+                            keypress: function(e) {
+                                var key = e.which;
+                                if(key == 13) {
+                                    $(this).click();
+                                }
+                            }
                         },
                     })
                 );

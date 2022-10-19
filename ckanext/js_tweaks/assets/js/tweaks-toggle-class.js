@@ -25,7 +25,16 @@ ckan.module("tweaks-toggle-class", function ($, _) {
             }
         },
         _onToggle: function (e) {
+            var className = this.options.className;
             this._target.toggleClass(this.options.className);
+            this._target.each(function(){
+                var _this = $(this);
+                var hasClass = _this.hasClass(className);
+                _this.find("div[tabindex]").each(function(){
+                    var _child_this = $(this);
+                    _child_this.attr('tabindex', hasClass ? '0': '-1');
+                });
+            });
         },
         _onAdd: function (e) {
             this._target.addClass(this.options.className);
