@@ -6,6 +6,11 @@ ckan.module("tweaks-select", function ($, _) {
         },
         initialize: function () {
             var select = this.$("#" + this.options.selectId);
+            if (!select.length) {
+                log.debug("Element with id #%s does not exist", this.options.selectId);
+                return
+            }
+
             var options = this.$("." + this.options.selectOptions);
 
             this.$(".pseudo-select-selected").text(
